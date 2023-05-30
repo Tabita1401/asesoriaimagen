@@ -6,12 +6,12 @@
   font-size: 20px;
   display:flex;
   text-align: center center ;
-  color: rgb(17, 14, 14);
+  color: rgb(205, 142, 142);
  
   background-image:linear-gradient(
       0deg,
-      rgba(0,0,0,0.5),
-      rgba(0,0,0,0.5) 
+      rgba(234, 211, 211, 0.5),
+      rgba(54, 33, 33, 0.5) 
   )
    ,url("/img/otro.png"), 
    url("/img/otro.png"),
@@ -21,27 +21,103 @@
    width: "50px";
    height: "50px";
    background-position: center center;
-   box-shadow: 10px 10px 10px rgba(132, 127, 127, 0.5);
+   box-shadow: 10px 10px 10px rgba(75, 19, 19, 0.5);
    }
-   div.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 180px;
+   body {
+    background-color: #000909;
+    background: linear-gradient(
+      25deg,
+      rgb(233, 225, 229),
+      rgb(113, 5, 75)
+    );
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: "Open Sans", sans-serif;
+  }
+  .container {
+    max-width: 800px;
+    margin: 5% auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
   }
   
-  div.gallery:hover {
-    border: 1px solid #777;
-  }
-  
-  div.gallery img {
-    width: 100%;
-    height: auto;
-  }
-  
-  div.desc {
-    padding: 15px;
+  .text-center {
     text-align: center;
+    margin-bottom: 1em;
+  }
+  
+  .lightbox-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .lightbox-gallery div > img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  .lightbox-gallery div {
+    margin: 10px;
+    flex-basis: 180px;
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .lightbox-gallery {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .lightbox > div {
+      margin-bottom: 10px;
+    }
+  }
+  
+  /*Lighbox CSS*/
+  
+  .lightbox {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    padding-top: 30px;
+    box-sizing: border-box;
+  }
+  
+  .lightbox img {
+    display: block;
+    margin: auto;
+  }
+  
+  .lightbox .caption {
+    margin: 15px auto;
+    width: 50%;
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #eee;
+  }
+  
+  .github-link {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .github-link:hover,
+  .github-link:active,
+  .github-link:visited {
+    color: #fff;
+    text-decoration: none;
   }
   body{
     height: 100%; 
@@ -125,22 +201,22 @@
   
   .aviso{
     font-size: 13px;  
-    color: #0e0e0e;  
+    color: #813737;  
   }
   
   
   h1{
     font-size: 39px;  
-    text-align: letf; 
+    text-align: center; 
     padding-bottom: 20px; 
-    color: #ab4493;
+    color: #4d3333;
   }
   
   
   h3{
     font-size: 16px; 
     padding-bottom: 30px;
-    color: #0e0e0e;   
+    color: #895151;   
   }
   
   
@@ -168,5 +244,5 @@
   
   .formulario textarea:focus{
     outline:0;
-    border: 1px solid #97d848;
+    border: 1px solid #80b044;
   }
